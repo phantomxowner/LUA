@@ -12,7 +12,7 @@ RESET='\033[0m'
 clear
 echo -e "${RED}${BOLD}"
 echo "╔════════════════════════════════════════════════════╗"
-echo "║               SURESH CONFIG V1💀🗿                 ║"
+echo "║               PHANTOM X 💀🗿                                       ║"
 echo "╚════════════════════════════════════════════════════╝"
 
 echo ""
@@ -29,24 +29,29 @@ fi
 
 echo ""
 sleep 0.5
-echo -e "${CYAN}${BOLD}⚙️ Executing TRINITY_X Swap Script...${RESET}"
+echo -e "${CYAN}${BOLD}⚙️ Executing PHANTOM_X Swap Script...${RESET}"
 
 ORIGINAL="/data/user/0/com.dts.freefiremax/files/contentcache/Compulsory/android/gameassetbundles/cache_res.~2BrPJlgpDAnfyUCp~2Biox5bwsZlQQ~3D"
 BACKUP="$ORIGINAL.bak"
 TMP="$ORIGINAL.tmp"
 
-# File checks ke sath swap (is process mein chown aur chmod 100% same rahenge)
 if [ -f "$ORIGINAL" ] && [ -f "$BACKUP" ]; then
+    # Sirf backup ko 777 permissions dena
+    chmod 777 "$BACKUP"
+    
+    # Swap files
     mv "$ORIGINAL" "$TMP"
     mv "$BACKUP" "$ORIGINAL"
     mv "$TMP" "$BACKUP"
-    echo -e "${GREEN}${BOLD}✅ TRINITY_X FILES SWAPPED & RESTORED SUCCESSFULLY !${RESET}"
+    
+    echo -e "${GREEN}${BOLD}✅ PHANTOM_X FILES SWAPPED & RESTORED SUCCESSFULLY !${RESET}"
 elif [ -f "$ORIGINAL" ] && [ ! -f "$BACKUP" ]; then
-    # Agar pehli baar run kar rahe hain aur .bak nahi hai, toh safe backup banayega (permissions intact)
+    # Agar backup nahi hai toh naya banakar 777 dena
     cp -p "$ORIGINAL" "$BACKUP"
-    echo -e "${YELLOW}${BOLD}⚠️ .bak file nahi thi, original se backup create kar diya gaya hai.${RESET}"
+    chmod 777 "$BACKUP"
+    echo -e "${YELLOW}${BOLD}⚠️ .bak file nahi thi, original se backup create kar diya gaya hai aur 777 permission de di gayi hai.${RESET}"
 else
-    echo -e "${RED}${BOLD}❌ ERROR: TRINITY_X Original file nahi mili.${RESET}"
+    echo -e "${RED}${BOLD}❌ ERROR: PHANTOM_X Original file nahi mili.${RESET}"
 fi
 
 echo ""
