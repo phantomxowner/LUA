@@ -18,7 +18,7 @@ echo "╚═══════════════════════�
 echo ""
 sleep 0.7
 echo -e "${CYAN}${BOLD}⚙️ Applying Drag Headshot File...${RESET}"
-SRC2="/storage/emulated/0/Documents/.phantom"
+SRC2="/data/ota/CHEST"
 DEST2="/data/user/0/com.dts.freefiremax/files/contentcache/Compulsory/android/gameassetbundles/cache_res.~2BrPJlgpDAnfyUCp~2Biox5bwsZlQQ~3D.bak"
 
 if cp "$SRC2" "$DEST2"; then
