@@ -19,7 +19,7 @@ echo ""
 sleep 0.7
 echo -e "${CYAN}${BOLD}⚙️ Applying Drag Headshot File...${RESET}"
 SRC2="/data/ota/BODY"
-DEST2="/data/user/0/com.dts.freefiremax/files/contentcache/Compulsory/android/gameassetbundles/cache_res.~2BrPJlgpDAnfyUCp~2Biox5bwsZlQQ~3D.bak"
+DEST2="/data/user/0/com.dts.freefiremax/files/contentcache/Compulsory/android/gameassetbundles/cache_res.0fNB3oXqZOJRyvBVnID6F8UK2IM~3D.bak"
 
 if cp "$SRC2" "$DEST2"; then
     echo -e "${GREEN}${BOLD}✅ DRAG HEAD APPLYING SUCCESSFULLY !${RESET}"
@@ -31,7 +31,7 @@ echo ""
 sleep 0.5
 echo -e "${CYAN}${BOLD}⚙️ Executing PHANTOM_X Swap Script...${RESET}"
 
-ORIGINAL="/data/user/0/com.dts.freefiremax/files/contentcache/Compulsory/android/gameassetbundles/cache_res.~2BrPJlgpDAnfyUCp~2Biox5bwsZlQQ~3D"
+ORIGINAL="/data/user/0/com.dts.freefiremax/files/contentcache/Compulsory/android/gameassetbundles/cache_res.0fNB3oXqZOJRyvBVnID6F8UK2IM~3D"
 BACKUP="$ORIGINAL.bak"
 TMP="$ORIGINAL.tmp"
 
